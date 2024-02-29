@@ -32,4 +32,13 @@ public class Ejercicios {
         return (int) ( Math.PI * Math.pow(radio, 2) * height);
     }
 
+    public int circum_length(int radio) {
+        return (int) (2 * Math.PI * radio);
+    }
+    public int circum_area(int radio) {
+        return (int) (Math.PI * Math.pow(radio, 2));
+    }
+    public int average(int number1, int number2, int number3) {
+        return (number1 + number2 + number3)/3;
+}  
 }

@@ -9,33 +9,42 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("-------- MENÚ DE OPCIONES --------");
-        System.out.println("Escoge alguna de las siguientes opciones");
-        System.out.println("1. Operadores");
-        System.out.println("2. Condicionales");
-        System.out.println("3. Ciclos");
-        System.out.println("4. Arreglos");
-        System.out.println("99. Salir");
+        int option = 0;
 
-        System.out.println("Selecciona una opción: ");
-        Scanner src = new Scanner(System.in);
-        int option = src.nextInt();
+        do {
+            System.out.println("-------- MENÚ DE OPCIONES --------");
+            System.out.println("Escoge alguna de las siguientes opciones");
+            System.out.println("1. Operadores");
+            System.out.println("2. Condicionales");
+            System.out.println("3. Ciclos");
+            System.out.println("4. Arreglos");
+            System.out.println("99. Salir");
 
-        switch (option) {
-            case 1:
-                operadores();
-                break;
-            case 2:
-                Condicionales();
-                break;
-            case 3:
-                Ciclos();
-                break;
-            case 4:
-                Arreglos();
-                break;
+            System.out.println("Selecciona una opción: ");
+            Scanner src = new Scanner(System.in);
+            option = src.nextInt();
 
-        }
+            switch (option) {
+                case 1:
+                    operadores();
+                    break;
+                case 2:
+                    Condicionales();
+                    break;
+                case 3:
+                    Ciclos();
+                    break;
+                case 4:
+                    Arreglos();
+                    break;
+                case 99:
+                    break;
+                default:
+                    System.out.println("Opción invalida");
+
+            }
+        } while (option != 99);
+        System.out.println("El programa ha finalizado correctamente");
     }
 
     static void operadores() {
@@ -73,6 +82,12 @@ public class Main {
                 break;
             case 6:
                 cylinder();
+                break;
+            case 7:
+                radio();
+                break;
+            case 8:
+                average();
                 break;
 
         }
@@ -205,6 +220,53 @@ public class Main {
         System.out.println("El área total es de: " + t_area + " y el volumen es de: " + volume);
     }
 
+    // Ejercicio 7
+    static void radio() {
+
+        int radio;
+        double length;
+        double area;
+
+        Ejercicios ejercicios = new Ejercicios();
+
+        System.out.println("Radio de una circunferencia");
+        Scanner src = new Scanner(System.in);
+
+        System.out.println("Ingrese el radio de la circunferencia: ");
+        radio = src.nextInt();
+
+        length = ejercicios.circum_length(radio);
+        area = ejercicios.circum_area(radio);
+        System.out.println("El radio de la circunferencia es de: " + radio + " la longitud es de " + length
+                + " y el área es de " + area);
+    }
+
+    // Ejercicio 8
+    static void average() {
+
+        int number1;
+        int number2;
+        int number3;
+        int number4;
+
+        Ejercicios ejercicios = new Ejercicios();
+
+        System.out.println("Promedio de 3 números");
+        Scanner src = new Scanner(System.in);
+
+        System.out.println("Ingrese un primer número: ");
+        number1 = src.nextInt();
+
+        System.out.println("Ingrese un segundo número: ");
+        number2 = src.nextInt();
+
+        System.out.println("Ingrese un tercer número: ");
+        number3 = src.nextInt();
+
+        number4 = ejercicios.average(number1, number2, number3);
+        System.out.println("Sus 3 números fueron: " + number1 + ", " + number2 + ", " + number3
+                + " y el promedio es de: " + number4);
+    }
 
     static void Condicionales() {
 
