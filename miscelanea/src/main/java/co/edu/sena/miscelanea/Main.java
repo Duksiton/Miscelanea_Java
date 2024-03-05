@@ -284,8 +284,160 @@ public class Main {
         Scanner src = new Scanner(System.in);
         int optc = src.nextInt();
 
+        switch (optc) {
+            case 1:
+                num();
+                break;
+            case 2:
+                numame();
+                break;
+            case 3:
+                treen();
+                break;
+            case 4:
+                sumnum();
+                break;
+            case 5:
+                div();
+                break;
+            case 6:
+                numne();
+                break;
+            case 7:
+                yb();
+                break;
+        }
     }
 
+    // Primer ejercicio condicional
+    public static void num() {
+        int val;
+
+        Ejercicios ejercicios = new Ejercicios();
+
+        System.out.println("Número positivo o negativo");
+        Scanner src = new Scanner(System.in);
+
+        System.out.println("Ingrese un número: ");
+        val = src.nextInt();
+
+        ejercicios.num(val);
+        System.out.println("");
+    }
+
+    // Segundo ejercicio condicional
+    public static void numame() {
+        int num;
+        int num2;
+
+        Ejercicios ejercicios = new Ejercicios();
+
+        System.out.println("Número mayor o menor");
+        Scanner src = new Scanner(System.in);
+
+        System.out.println("Ingrese un número: ");
+        num = src.nextInt();
+
+        System.out.println("Ingrese un segundo número: ");
+        num2 = src.nextInt();
+
+        ejercicios.numame(num, num2);
+        System.out.println("");
+    }
+
+    // Tercer ejercicio condicional
+    public static void treen() {
+        int vl;
+        int vl2;
+        int vl3;
+
+        Ejercicios ejercicios = new Ejercicios();
+
+        System.out.println("3 Números mayor o menor");
+        Scanner src = new Scanner(System.in);
+
+        System.out.println("Digite un primer número: ");
+        vl = src.nextInt();
+        System.out.println("Digite un segundo número: ");
+        vl2 = src.nextInt();
+        System.out.println("Digite un tercer número: ");
+        vl3 = src.nextInt();
+
+        ejercicios.treen(vl, vl2, vl3);
+        System.out.println("");
+    }
+
+    // Cuarto ejercicio condicional
+    public static void sumnum() {
+        int vl;
+        int vl2;
+        int resultado;
+
+        Ejercicios ejercicios = new Ejercicios();
+
+        System.out.println("Números A y B sumar o restar");
+        Scanner src = new Scanner(System.in);
+
+        System.out.println("Digite un primer número: ");
+        vl = src.nextInt();
+        System.out.println("Digite un segundo número: ");
+        vl2 = src.nextInt();
+
+        resultado = ejercicios.sumnum(vl, vl2);
+        System.out.println("El resultado es: " + resultado);
+    }
+
+    // Quinto ejercicio condicional
+    public static void div() {
+        int A;
+        int B;
+
+        Ejercicios ejercicios = new Ejercicios();
+
+        System.out.println("División entre dos números A y B");
+        Scanner src = new Scanner(System.in);
+
+        System.out.println("Digite el primer número: ");
+        A = src.nextInt();
+        System.out.println("Digite el segundo número: ");
+        B = src.nextInt();
+
+        ejercicios.div(A, B);
+    }
+// sexto ejercicio condicional
+    public static void numne() {
+        int A;
+        int B;
+        int R;
+
+        Ejercicios ejercicios = new Ejercicios();
+
+        System.out.println("Sumar o multiplicar dos números A y B");
+        Scanner src = new Scanner(System.in);
+
+        System.out.println("Digite el primer número: ");
+        A = src.nextInt();
+        System.out.println("Digite el segundo número: ");
+        B = src.nextInt();
+
+        R = ejercicios.numne(A, B);
+        System.out.println("El resultado es: " + R);
+    }
+
+    // séptimo ejercicio condicional
+
+    public static void yb() {
+        int a;
+
+        System.out.println("año bisiesto");
+        Scanner src = new Scanner(System.in);
+
+        System.out.println("Ingrese el año: ");
+        a = src.nextInt();
+
+        Ejercicios ejercicios = new Ejercicios();
+        ejercicios.yb(a);
+    }
     static void Ciclos() {
 
         System.out.println("-------- MENÚ DE OPCIONES --------");
